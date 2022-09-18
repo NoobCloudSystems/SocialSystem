@@ -1,6 +1,5 @@
 repositories {
     maven("https://jitpack.io")
-    maven("https://repo.luccboy.tk")
 }
 dependencies {
     implementation(project(":api"))
@@ -12,7 +11,7 @@ dependencies {
     compileOnly("com.velocitypowered:velocity-api:3.1.2-SNAPSHOT")
     annotationProcessor("com.velocitypowered:velocity-api:3.1.2-SNAPSHOT")
 
-    compileOnly("xyz.luccboy.noobcloud:api:1.0-SNAPSHOT")
+    compileOnly("com.github.NoobCloudSystems.NoobCloud:api:1.0-SNAPSHOT")
 
     implementation("com.github.Heliumdioxid.database-api:mysql:v1.0.0-rc1")
     implementation("mysql:mysql-connector-java:8.0.30")

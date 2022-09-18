@@ -1,5 +1,6 @@
 plugins {
     java
+    id("maven-publish")
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
@@ -9,6 +10,7 @@ allprojects {
 
     apply {
         plugin("java")
+        plugin("maven-publish")
         plugin("com.github.johnrengelman.shadow")
     }
 
@@ -23,5 +25,13 @@ allprojects {
 
     tasks.withType<JavaCompile> {
         options.encoding = "UTF-8"
+    }
+
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                from(components["java"])
+            }
+        }
     }
 }
